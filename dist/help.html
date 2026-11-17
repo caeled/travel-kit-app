@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Help · Travel Kit</title>
+<style>
+  :root { --navy:#173F74; --ink:#1C2733; --sub:#4A5A6A; --card:#F4F6F9; --line:#D5DCE4; }
+  body { margin:0; font-family: system-ui, "Segoe UI", sans-serif; color:var(--ink); background:#fff; }
+  main { max-width: 860px; margin: 0 auto; padding: 1.2rem 1.2rem 3rem; line-height:1.55; }
+  h1 { color: var(--navy); margin-bottom:.2rem; }
+  h2 { color: var(--navy); margin-top:2.2rem; border-bottom:2px solid var(--line); padding-bottom:.3rem; }
+  h3 { margin-top:1.4rem; }
+  .back { font-weight:700; }
+  .note { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:.8rem 1rem; }
+  li { margin:.3rem 0; }
+  footer { color:var(--sub); font-size:.9rem; margin-top:2.5rem; }
+</style>
+</head>
+<body>
+<main>
+  <p><a class="back" href="index.html">← Back to Travel Kit</a></p>
+  <h1>Travel Kit Help</h1>
+  <p>Travel Kit packs three Everyday Cool travel tools into one app. This page explains what each tool does, how to use it, and where its information comes from. Each tool also carries its own full documentation inside it (the README files ship with the app), and Find It has a built-in Help menu of its own.</p>
+  <p class="note"><strong>Internet at a glance:</strong> Tonight's Sky works fully offline. Weather Everywhere's core workshop works offline; only its live forecasts and research links need the internet. Find It needs the internet for its map, searches, and directions.</p>
+
+  <h2>Tonight's Sky</h2>
+  <p>The sky is a giant clock: the stars turn, the Moon changes its face, and the planets wander along one road across the sky. Drag the sky around, run time forward, and find out which of those lights you can go outside and see tonight.</p>
+  <h3>How to use it</h3>
+  <ul>
+    <li><strong>The sky dome.</strong> Drag with a mouse or finger to look around; scroll or pinch to zoom. Click a star, planet, the Moon, or a satellite for an info card (distance, how long its light took, rise and set times). Pick a place (Columbus, Ohio by default, ten others from the Arctic to Sydney), type a latitude and longitude, or press "Use my location" — it only asks if you press it. Choose a night and slide the time, or press <strong>Now</strong>. Layers include constellation lines and names, star names, binocular treasures, grids, star trails, satellites, and a red night-vision mode.</li>
+    <li><strong>What's up tonight:</strong> sunset, darkness and sunrise times, the Moon's phase, and the bright planets, stars and treasures above your horizon.</li>
+    <li><strong>Explainers:</strong> why the stars move, the planets' road (the ecliptic), Moon phases with a top-down diagram, how long light takes to reach you, and what your latitude changes.</li>
+    <li><strong>Satellites:</strong> the International Space Station, Starlink (newest launch group, a sample, or the whole fleet after a refresh), and Dragon when one is flying free. Pass lists show rise, highest point and set times, directions, maximum elevation, and whether you can actually see the pass (satellite sunlit while you are in the dark).</li>
+    <li><strong>Radio astronomy:</strong> a simulated "radio eyes" sky, the electromagnetic spectrum, the 21 cm hydrogen line, why dishes are huge, pulsar "clicks," the stories of Jansky, Reber, Bell Burnell and the Wow! signal — plus a downloadable family plan (PDF, inside the tool) for building a backyard radio telescope from a salvaged DIRECTV dish.</li>
+  </ul>
+  <h3>Data sources and notes</h3>
+  <ul>
+    <li>Star positions: Yale Bright Star Catalogue (903 stars to magnitude 4.5), via NASA HEASARC. Constellation figures: d3-celestial. Sun, Moon and planet positions use simplified formulas (Schlyter, Meeus) checked against NASA JPL Horizons. <strong>This is a model:</strong> good enough to find things with your eyes and binoculars, not for aiming a telescope by numbers.</li>
+    <li>Satellite orbits are computed with SGP4 (satellite.js) from CelesTrak data <strong>bundled into the app as a snapshot dated 14 November 2026</strong>. Pass predictions are good for roughly one to two weeks after that date and fade after that — an orbit snapshot ages the way a printed timetable does. The optional <strong>Refresh orbits</strong> button fetches current orbit lists from celestrak.org (the only network request the tool makes; CelesTrak sees your internet address like any website, and nothing else is sent).</li>
+    <li>Everything else works without internet. The page sends nothing and stores nothing.</li>
+  </ul>
+
+  <h2>Find It</h2>
+  <p>A traveller's finder: set a place, tap one big category button, and get the nearest matches on a live map, each with directions.</p>
+  <h3>How to use it</h3>
+  <ul>
+    <li><strong>Where are you?</strong> The map opens on Defiance, Ohio. Press <strong>Find me</strong> to centre it on your own location (with the device's permission — the map moves on the first quick fix, then keeps sharpening; a blue ring shows the accuracy). Or type a ZIP code or town name and let the place search find it. If you say no to location, nothing else runs on its own; the ZIP box and an opt-in "Use a rough guess" button remain.</li>
+    <li><strong>What do you need?</strong> 23 big category buttons in five groups (Eat &amp; drink, Health, Car &amp; road, Sleep &amp; outdoors, Everyday needs): coffee, groceries, pharmacy, hospital, dentist, gas, EV charging, rest stop, auto repair, hotel, campground, library, park, laundromat, ATM, post office, hardware store, public restroom, and more. Results drop pins on the map and list nearest first, with straight-line distance, the address when OpenStreetMap has one, any website/social/phone/hours volunteers recorded, and a <strong>Directions</strong> button that hands off to Google Maps directions (OpenStreetMap routing as the alternative) in your browser.</li>
+    <li><strong>Flight tracker:</strong> type a flight number (UA123, DL 1234, or UAL123) and the plane appears on the same map with altitude, speed, heading and aircraft, refreshing every 20 seconds while the page is on screen. US airport delays for its two airports come from the FAA's NAS Status feed. Only the flight number is sent.</li>
+    <li>Find It's own header has a <strong>Help ▾</strong> menu with step-by-step documentation, privacy notes, and what to do when nothing is found.</li>
+  </ul>
+  <h3>Data sources and notes</h3>
+  <ul>
+    <li>The map is OpenStreetMap, drawn by Leaflet (loaded from the unpkg CDN). Place search uses OpenStreetMap's Nominatim service; category search uses the Overpass API (several mirrors, asked in turn with short time limits; if none answer, one Nominatim backup search runs for the common categories). <strong>Find It needs the internet</strong> — tiles, libraries, and searches all load from these public services.</li>
+    <li><strong>Privacy:</strong> your location is remembered only in the open tab, for up to 10 minutes, and is never saved or sent anywhere else. If the device cannot locate you, an opt-in rough town-level guess from your internet connection (geojs.io, then ipwho.is) is offered and always labelled as rough.</li>
+    <li>Map and place data © OpenStreetMap contributors (ODbL). If a place is wrong or missing, anyone can fix it on openstreetmap.org — the fix then shows up for every traveller.</li>
+  </ul>
+
+  <h2>Weather Everywhere</h2>
+  <p>A portable world-weather workshop. Ask, explore, connect: maps, comparisons, experiments, and live forecasts for anywhere on the planet.</p>
+  <h3>How to use it</h3>
+  <ul>
+    <li><strong>Map room:</strong> bundled world geography — click any coordinate, pan and zoom, use the month slider, switch °C/°F. Sixteen named places are built in, or search for any place by name (Open-Meteo's place database; same-name towns are shown with region and country so you can tell them apart).</li>
+    <li><strong>Look live:</strong> current conditions and a seven-day forecast for the selected place, with the source, retrieval time, and valid time shown on the card. Nothing is sent until you press the button.</li>
+    <li><strong>Look back:</strong> the weather on one past day, for any date from 1940 onward.</li>
+    <li><strong>Opposite weather:</strong> conditions where you are beside the point on the exact opposite side of the Earth.</li>
+    <li><strong>Labs:</strong> the Ripple lab (ocean currents, density, wind), the Cloud maker, and Sun &amp; tilt (change Earth's tilt and watch a place's year change) — all computed on your device.</li>
+    <li><strong>Field missions</strong> (nine curiosity-led challenges, no timers or scores), a <strong>Notebook</strong> for notes and experiment evidence (saved in this app's local storage; export/import as JSON to carry notes between computers), a plain-language <strong>Weather words</strong> glossary, and a <strong>Go deeper</strong> page of research links (NOAA, NASA Worldview, NWS radar, and more — these open in your browser).</li>
+    <li><strong>Quiet skies</strong> button calms automatic motion; your system reduced-motion setting is honoured automatically.</li>
+  </ul>
+  <h3>Data sources and notes</h3>
+  <ul>
+    <li>Live forecasts and place search: <strong>Open-Meteo</strong> (free for non-commercial use; best-effort, with limits and no uptime guarantee). Past-day weather: the Open-Meteo archive, built on ERA5 reanalysis. A live result is reused for ten minutes; if a request fails, any older saved result is labelled <strong>OFFLINE / SAVED SNAPSHOT</strong> with its dates. The workshop never substitutes an invented forecast.</li>
+    <li>The core workshop — maps, twelve-month comparison profiles, labs, missions, glossary — is bundled and works offline. The comparison profiles are teaching examples, not station climate normals.</li>
+    <li>This is a teaching workshop, not an operational forecast or warning service. For weather warnings, use your official local weather service. Full equations, assumptions and dataset provenance are in the tool's SCIENCE.md, which ships with the app.</li>
+  </ul>
+
+  <footer>Travel Kit v1.0.0 · Steven Powell · Built with AI assistance · Offered free. Code MIT, lessons CC BY 4.0; third-party data and code keep their own terms (see each room's THIRD-PARTY.md). Part of the Everyday Cool collection.</footer>
+</main>
+</body>
+</html>
