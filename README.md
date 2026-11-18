@@ -1,6 +1,6 @@
 # Travel Kit — desktop app
 
-Three travel rooms from Steven Powell's **Everyday Cool** collection in one installable
+Four travel rooms from Steven Powell's **Everyday Cool** collection in one installable
 app for Windows and macOS:
 
 - **Tonight's Sky** — a drag-and-zoom night sky, planets, the Moon's phase, satellite
@@ -9,14 +9,18 @@ app for Windows and macOS:
   on a live OpenStreetMap map, each with directions. Needs the internet.
 - **Weather Everywhere** — a portable world-weather workshop: maps, comparisons, ocean
   and cloud labs, field missions, and live forecasts. Core workshop works offline.
+- **The Radio Room** — a retro wooden radio that really plays (six SomaFM stations on
+  a make-believe FM dial), a shelf of everywhere radio lives now, and a scanner tuner
+  that finds your county's feeds on Broadcastify. Needs the internet.
 
-The app's home page links to all three rooms, and a built-in **Help** page documents
+The app's home page links to all four rooms, and a built-in **Help** page documents
 what each tool does, how to use it, and where its data comes from.
 
 - The collection: https://caeled.github.io/everyday-cool/
 - Tonight's Sky: https://caeled.github.io/everyday-cool/projects/tonights-sky/
 - Find It: https://caeled.github.io/everyday-cool/projects/find-it/
 - Weather Everywhere: https://caeled.github.io/everyday-cool/projects/weather-everywhere/
+- The Radio Room: https://caeled.github.io/everyday-cool/projects/radio-room/
 
 ## Downloads
 

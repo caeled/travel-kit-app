@@ -21,8 +21,8 @@
 <main>
   <p><a class="back" href="index.html">← Back to Travel Kit</a></p>
   <h1>Travel Kit Help</h1>
-  <p>Travel Kit packs three Everyday Cool travel tools into one app. This page explains what each tool does, how to use it, and where its information comes from. Each tool also carries its own full documentation inside it (the README files ship with the app), and Find It has a built-in Help menu of its own.</p>
-  <p class="note"><strong>Internet at a glance:</strong> Tonight's Sky works fully offline. Weather Everywhere's core workshop works offline; only its live forecasts and research links need the internet. Find It needs the internet for its map, searches, and directions.</p>
+  <p>Travel Kit packs four Everyday Cool travel tools into one app. This page explains what each tool does, how to use it, and where its information comes from. Each tool also carries its own full documentation inside it (the README files ship with the app), and Find It and The Radio Room have built-in Help menus of their own.</p>
+  <p class="note"><strong>Internet at a glance:</strong> Tonight's Sky works fully offline. Weather Everywhere's core workshop works offline; only its live forecasts and research links need the internet. Find It needs the internet for its map, searches, and directions. The Radio Room needs the internet for everything it plays or looks up — radio is live by nature.</p>
 
   <h2>Tonight's Sky</h2>
   <p>The sky is a giant clock: the stars turn, the Moon changes its face, and the planets wander along one road across the sky. Drag the sky around, run time forward, and find out which of those lights you can go outside and see tonight.</p>
@@ -76,7 +76,24 @@
     <li>This is a teaching workshop, not an operational forecast or warning service. For weather warnings, use your official local weather service. Full equations, assumptions and dataset provenance are in the tool's SCIENCE.md, which ships with the app.</li>
   </ul>
 
-  <footer>Travel Kit v1.0.0 · Steven Powell · Built with AI assistance · Offered free. Code MIT, lessons CC BY 4.0; third-party data and code keep their own terms (see each room's THIRD-PARTY.md). Part of the Everyday Cool collection.</footer>
+  <h2>The Radio Room</h2>
+  <p>Radio never went away — it moved into the internet. The Radio Room is a retro wooden radio that really plays, a shelf of everywhere radio lives now, a short workshop on how radio works here, and a scanner tuner for your county's public-safety feeds.</p>
+  <h3>How to use it</h3>
+  <ul>
+    <li><strong>The retro player.</strong> Press any cream station button: the needle slides along the dial and the music starts. The six presets are <strong>SomaFM</strong> channels (a listener-supported station from San Francisco) playing live from SomaFM's published stream addresses. The <strong>Tuning</strong> knob steps to the next station, the <strong>Volume</strong> slider is the set's volume, and <strong>Stop</strong> halts the stream. Nothing is saved — close the room and the set forgets, like a real radio with the power cut. The room's own header has a <strong>Help ▾</strong> menu with the full documentation.</li>
+    <li><strong>The listening shelf.</strong> Music services, live stations, public radio, real radios you can tune (WebSDR and KiwiSDR), and old-time radio archives. The big services only play inside their own sites and apps, under their own accounts and licences, so every shelf link opens in your browser — nothing on the shelf plays inside this app.</li>
+    <li><strong>The workshop</strong> explains the three kinds of listening (a station stream, a personalized service, a scanner feed), why scanner feeds lag behind real time, and what a WebSDR is.</li>
+    <li><strong>The scanner tuner</strong> (the smaller wooden box under the radio) finds your county and opens that county's page on <strong>Broadcastify</strong>. It has a one-tap preset for Defiance County, Ohio, a <strong>Use my location</strong> button, and a ZIP code or town box.</li>
+  </ul>
+  <h3>Data sources and notes</h3>
+  <ul>
+    <li><strong>The dial is make-believe, the music is real.</strong> The FM frequencies on the dial are the room's own friendly layout for the six stations — internet streams have no broadcast frequencies. The stations themselves are genuine live SomaFM streams: what you hear is what everyone tuned in right now hears.</li>
+    <li><strong>The scanner tuner is a finder, not a player.</strong> It works out your county — by geolocation if you press <strong>Use my location</strong>, or from the ZIP code or town you type — using OpenStreetMap's <strong>Nominatim</strong> service, so it needs the internet. It then opens Broadcastify's own pages in your browser: <strong>scanner audio plays on Broadcastify's site, in Broadcastify's own player</strong>, and no Broadcastify API is used. Its checked county links cover all 88 Ohio counties; anywhere else it opens Broadcastify's front door rather than guessing a link.</li>
+    <li><strong>Scanner feeds can be delayed</strong> — from half a minute to several minutes behind real time, because the audio travels from a volunteer's radio to the service and back out, and some services add a deliberate delay. A scanner is for understanding what's happening in your town, never a substitute for emergency services.</li>
+    <li><strong>Privacy:</strong> the room keeps nothing. Pressing a preset asks SomaFM's stream server for that channel's audio (it sees your internet address, the way any website does). The tuner sends only your device's location, or the ZIP/town you typed, to Nominatim, and only when you press its buttons; the answer is not kept.</li>
+  </ul>
+
+  <footer>Travel Kit v1.1.0 · Steven Powell · Built with AI assistance · Offered free. Code MIT, lessons CC BY 4.0; third-party data and code keep their own terms (see each room's THIRD-PARTY.md). Part of the Everyday Cool collection.</footer>
 </main>
 </body>
 </html>
