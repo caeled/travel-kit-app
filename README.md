@@ -16,6 +16,26 @@ app for Windows and macOS:
 The app's home page links to all four rooms, and a built-in **Help** page documents
 what each tool does, how to use it, and where its data comes from.
 
+## What's new in v1.2.0
+
+The same professional treatment the Everyday Cool app got:
+
+- **Splash screen** — new robot-traveler artwork (map, telescope, suitcase, a
+  smiling sun behind a cloud) with "Travel Kit" set in real type over it and the
+  version in the corner. It stays up for a **10-second minimum** and dismisses at
+  the later of the main window loading or those 10 seconds, with an unconditional
+  15-second hard cap so it can never trap you. (The Everyday Cool splash closed
+  the moment the app loaded and flashed past too fast to see; this one is built
+  to be looked at.)
+- **A native menu bar** — **File → Exit** (on macOS, the Travel Kit menu → Quit),
+  and **Help → Documentation** (an app-level docs page: the four rooms, getting
+  around, online vs. offline), **Help → Product Index** (Steven Powell's product
+  index on GitHub Pages, in your browser), and **Help → About Travel Kit** (name
+  and version).
+- **The Radio Room** was already aboard — it joined in v1.1.0 as the fourth room —
+  so this release leaves the four rooms exactly as they were and changes only the
+  shell around them.
+
 - The collection: https://caeled.github.io/everyday-cool/
 - Tonight's Sky: https://caeled.github.io/everyday-cool/projects/tonights-sky/
 - Find It: https://caeled.github.io/everyday-cool/projects/find-it/

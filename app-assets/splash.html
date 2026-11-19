@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Kit</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden;background:#0d1825}
+body{font-family:Georgia,"Times New Roman",serif}
+img.art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.shade{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,20,32,.62) 0%,rgba(8,20,32,.18) 30%,rgba(8,20,32,0) 48%)}
+.title{position:absolute;top:26px;left:0;right:0;text-align:center;color:#fff}
+.title h1{margin:0;font-size:52px;font-weight:700;letter-spacing:.5px;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.title p{margin:6px 0 0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:15px;letter-spacing:2.6px;color:#f5c369;text-transform:uppercase}
+.version{position:absolute;right:16px;bottom:12px;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:13px;font-weight:650;color:#fff;background:rgba(8,20,32,.55);padding:4px 10px;border-radius:20px}
+.loading{position:absolute;left:16px;bottom:12px;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:13px;color:#d9e5ed;background:rgba(8,20,32,.55);padding:4px 10px;border-radius:20px}
+</style>
+</head>
+<body>
+<img class="art" src="splash-art.jpg" alt="">
+<div class="shade"></div>
+<div class="title"><h1>Travel Kit</h1><p>Four tools for the road</p></div>
+<div class="loading">Packing the kit…</div>
+<div class="version" id="ver">v1.2.0</div>
+<script>
+if (window.__TK_VERSION) document.getElementById("ver").textContent = "v" + window.__TK_VERSION;
+</script>
+</body>
+</html>

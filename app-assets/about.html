@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Travel Kit</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0d1825;color:#d9e5ed;font:15.5px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;padding:26px 28px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:30px;margin:0 0 4px;color:#fff}
+.ver{color:#f5c369;font-weight:700;margin:0 0 14px}
+p{margin:0 0 10px}
+.fine{font-size:13.5px;color:#9db4c0}
+</style>
+</head>
+<body>
+<h1>Travel Kit</h1>
+<p class="ver" id="ver">Version 1.2.0</p>
+<p>Four Everyday Cool travel tools in one app: Tonight's Sky for the night above you, Find It for what you need wherever you are, Weather Everywhere for the whole planet's weather, and The Radio Room for radio from everywhere.</p>
+<p>Built by Steven Powell with the Council. Tonight's Sky and the Weather Everywhere workshop run offline; Find It and The Radio Room use live data when you are online, and links that leave the app open in your default browser.</p>
+<p class="fine">Part of the Everyday Cool collection: caeled.github.io/everyday-cool</p>
+<script>
+if (window.__TK_VERSION) document.getElementById("ver").textContent = "Version " + window.__TK_VERSION;
+</script>
+</body>
+</html>
