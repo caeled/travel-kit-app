@@ -6,25 +6,56 @@
 <title>Help · Travel Kit</title>
 <style>
   :root { --navy:#173F74; --ink:#1C2733; --sub:#4A5A6A; --card:#F4F6F9; --line:#D5DCE4; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
   body { margin:0; font-family: system-ui, "Segoe UI", sans-serif; color:var(--ink); background:#fff; }
-  main { max-width: 860px; margin: 0 auto; padding: 1.2rem 1.2rem 3rem; line-height:1.55; }
-  h1 { color: var(--navy); margin-bottom:.2rem; }
-  h2 { color: var(--navy); margin-top:2.2rem; border-bottom:2px solid var(--line); padding-bottom:.3rem; }
-  h3 { margin-top:1.4rem; }
+  .topbar { position:sticky; top:0; z-index:10; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:12px 22px; background:var(--navy); color:#fff; box-shadow:0 1px 6px rgba(23,63,116,.22); }
+  .wordmark { color:#fff; font-size:19px; font-weight:800; letter-spacing:.02em; text-decoration:none; }
+  .doc-edition { font-size:12px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase; color:#DCE8F5; }
+  main { max-width: 880px; margin: 0 auto; padding: 1.6rem 1.2rem 3rem; line-height:1.6; }
+  .eyebrow { color:#8a6d1d; font-size:13px; font-weight:700; letter-spacing:1.6px; margin:0 0 10px; }
+  h1 { color: var(--navy); font-size:38px; line-height:1.15; margin:0 0 10px; }
+  .intro { font-size:18px; color:var(--sub); }
+  h2 { color: var(--navy); margin-top:2.4rem; border-bottom:2px solid var(--line); padding-bottom:.35rem; scroll-margin-top:82px; }
+  h3 { color:var(--navy); margin-top:1.4rem; }
   .back { font-weight:700; }
-  .note { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:.8rem 1rem; }
+  .contents { display:flex; flex-wrap:wrap; gap:8px; margin:24px 0; padding:14px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .contents a { display:inline-block; padding:6px 11px; border:1px solid #B9C9D8; border-radius:999px; background:var(--card); color:var(--navy); font-size:13.5px; font-weight:700; text-decoration:none; }
+  .contents a:hover, .contents a:focus-visible { background:#E8EFF6; }
+  .note { background:var(--card); border:1px solid var(--line); border-left:3px solid var(--navy); border-radius:10px; padding:.9rem 1rem; scroll-margin-top:82px; }
   li { margin:.3rem 0; }
-  footer { color:var(--sub); font-size:.9rem; margin-top:2.5rem; }
+  .support { background:var(--card); border:1px solid var(--line); border-left:3px solid var(--navy); border-radius:10px; padding:18px 22px; }
+  .support ul { list-style:none; margin:4px 0 0; padding:0; }
+  .support li { padding:8px 0; border-bottom:1px solid var(--line); }
+  .support li:last-child { border-bottom:0; padding-bottom:0; }
+  .support strong { display:block; color:var(--navy); }
+  a { text-underline-offset:3px; }
+  :focus-visible { outline:3px solid var(--navy); outline-offset:2px; }
+  footer { color:var(--sub); font-size:.9rem; margin-top:2.5rem; padding-top:16px; border-top:1px solid var(--line); }
+  @media (max-width:620px) { h1 { font-size:32px; } .topbar { padding:11px 16px; } main { padding-top:1.2rem; } }
 </style>
 </head>
 <body>
+<header class="topbar">
+  <a class="wordmark" href="index.html">Travel Kit</a>
+  <span class="doc-edition">Help</span>
+</header>
 <main>
   <p><a class="back" href="index.html">← Back to Travel Kit</a></p>
+  <p class="eyebrow">TRAVEL KIT · HELP</p>
   <h1>Travel Kit Help</h1>
-  <p>Travel Kit packs five Everyday Cool travel tools into one app. This page explains what each tool does, how to use it, and where its information comes from. Each tool also carries its own full documentation inside it (the README files ship with the app), and Find It, The Radio Room, and The Survival Guide have built-in Help menus of their own.</p>
-  <p class="note"><strong>Internet at a glance:</strong> Tonight's Sky works fully offline. Weather Everywhere's core workshop works offline; only its live forecasts and research links need the internet. Find It needs the internet for its map, searches, and directions. The Radio Room needs the internet for everything it plays or looks up — radio is live by nature.</p>
+  <p class="intro">Travel Kit packs five Everyday Cool travel tools into one app. This page explains what each tool does, how to use it, and where its information comes from. Each tool also carries its own full documentation inside it (the README files ship with the app), and Find It, The Radio Room, and The Survival Guide have built-in Help menus of their own.</p>
+  <nav class="contents" aria-label="Help contents">
+    <a href="#tonights-sky">Tonight's Sky</a>
+    <a href="#find-it">Find It</a>
+    <a href="#weather-everywhere">Weather Everywhere</a>
+    <a href="#radio-room">The Radio Room</a>
+    <a href="#survival-guide">The Survival Guide</a>
+    <a href="#internet-at-a-glance">Internet at a glance</a>
+  </nav>
+  <p class="note" id="internet-at-a-glance"><strong>Internet at a glance:</strong> Tonight's Sky works fully offline. Weather Everywhere's core workshop works offline; only its live forecasts and research links need the internet. Find It needs the internet for its map, searches, and directions. The Radio Room needs the internet for everything it plays or looks up — radio is live by nature.</p>
 
-  <h2>Tonight's Sky</h2>
+  <h2 id="tonights-sky">Tonight's Sky</h2>
   <p>The sky is a giant clock: the stars turn, the Moon changes its face, and the planets wander along one road across the sky. Drag the sky around, run time forward, and find out which of those lights you can go outside and see tonight.</p>
   <h3>How to use it</h3>
   <ul>
@@ -41,7 +72,7 @@
     <li>Everything else works without internet. The page sends nothing and stores nothing.</li>
   </ul>
 
-  <h2>Find It</h2>
+  <h2 id="find-it">Find It</h2>
   <p>A traveller's finder: set a place, tap one big category button, and get the nearest matches on a live map, each with directions.</p>
   <h3>How to use it</h3>
   <ul>
@@ -57,7 +88,7 @@
     <li>Map and place data © OpenStreetMap contributors (ODbL). If a place is wrong or missing, anyone can fix it on openstreetmap.org — the fix then shows up for every traveller.</li>
   </ul>
 
-  <h2>Weather Everywhere</h2>
+  <h2 id="weather-everywhere">Weather Everywhere</h2>
   <p>A portable world-weather workshop. Ask, explore, connect: maps, comparisons, experiments, and live forecasts for anywhere on the planet.</p>
   <h3>How to use it</h3>
   <ul>
@@ -76,7 +107,7 @@
     <li>This is a teaching workshop, not an operational forecast or warning service. For weather warnings, use your official local weather service. Full equations, assumptions and dataset provenance are in the tool's SCIENCE.md, which ships with the app.</li>
   </ul>
 
-  <h2>The Radio Room</h2>
+  <h2 id="radio-room">The Radio Room</h2>
   <p>Radio never went away — it moved into the internet. The Radio Room is a retro wooden radio that really plays, a shelf of everywhere radio lives now, a short workshop on how radio works here, and a scanner tuner for your county's public-safety feeds.</p>
   <h3>How to use it</h3>
   <ul>
@@ -93,7 +124,7 @@
     <li><strong>Privacy:</strong> the room keeps nothing. Pressing a preset asks SomaFM's stream server for that channel's audio (it sees your internet address, the way any website does). The tuner sends only your device's location, or the ZIP/town you typed, to Nominatim, and only when you press its buttons; the answer is not kept.</li>
   </ul>
 
-  <h2>The Survival Guide</h2>
+  <h2 id="survival-guide">The Survival Guide</h2>
   <p>Putting it all together: a survival guide. Every other room teaches one thing at a time; this one uses them all at once, outdoors — the chemistry makes the soap, the electronics makes the battery, the sky gives the direction, and the body knowledge does the first aid. It is written the way Scouts learn it, and every card carries two lines: a <strong>safety line</strong>, and an <strong>honesty line</strong> that says what the tip can and cannot do.</p>
   <h3>How to use it</h3>
   <ul>
@@ -111,7 +142,18 @@
     <li><strong>Privacy:</strong> the room keeps nothing and sends nothing; the checklist counts locally and is forgotten when the page closes.</li>
   </ul>
 
-  <footer>Travel Kit v1.3.0 · Steven Powell · Built with AI assistance · Offered free. Code MIT, lessons CC BY 4.0; third-party data and code keep their own terms (see each room's THIRD-PARTY.md). Part of the Everyday Cool collection.</footer>
+  <h2 id="source-support">Source &amp; support</h2>
+  <div class="support">
+    <ul>
+      <li><strong><a href="https://github.com/caeled/travel-kit-app" target="_blank" rel="noopener">Travel Kit on GitHub</a></strong> The source code and releases for this app.</li>
+      <li><strong><a href="https://github.com/caeled/everyday-cool" target="_blank" rel="noopener">Everyday Cool on GitHub</a></strong> The source repository for the full collection and its rooms.</li>
+      <li><strong><a href="https://github.com/caeled/travel-kit-app/issues" target="_blank" rel="noopener">Report an issue</a></strong> Bug reports and suggestions for the Travel Kit app.</li>
+      <li><strong><a href="https://caeled.github.io/everyday-cool/" target="_blank" rel="noopener">Everyday Cool online</a></strong> The live collection on the web.</li>
+    </ul>
+    <p>By Steven Powell · <a href="https://www.linkedin.com/in/stevendouglaspowell">Steve's Profile ↗</a></p>
+  </div>
+
+  <footer>Travel Kit v1.3.1 · Steven Powell · Built with AI assistance · Offered free. Code MIT, lessons CC BY 4.0; third-party data and code keep their own terms (see each room's THIRD-PARTY.md). Part of the Everyday Cool collection.</footer>
 </main>
 </body>
 </html>

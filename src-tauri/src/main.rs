@@ -65,6 +65,13 @@ fn main() {
             let docs = MenuItem::with_id(handle, "docs", "Documentation", true, None::<&str>)?;
             let products =
                 MenuItem::with_id(handle, "products", "Product Index", true, None::<&str>)?;
+            let github = MenuItem::with_id(
+                handle,
+                "github",
+                "GitHub Repository",
+                true,
+                None::<&str>,
+            )?;
             let about = MenuItem::with_id(
                 handle,
                 "about",
@@ -73,8 +80,13 @@ fn main() {
                 None::<&str>,
             )?;
             let sep = PredefinedMenuItem::separator(handle)?;
-            let help =
-                Submenu::with_items(handle, "Help", true, &[&docs, &products, &sep, &about])?;
+            let sep2 = PredefinedMenuItem::separator(handle)?;
+            let help = Submenu::with_items(
+                handle,
+                "Help",
+                true,
+                &[&docs, &products, &sep, &github, &sep2, &about],
+            )?;
             #[cfg(target_os = "macos")]
             {
                 // macOS convention: the first submenu is the app menu, and
@@ -112,6 +124,13 @@ fn main() {
                 let _ = app
                     .opener()
                     .open_url("https://caeled.github.io/everyday-cool/products/", None::<&str>);
+            }
+            "github" => {
+                // The source repository lives on GitHub; like every
+                // external link in this app, it opens in the OS browser.
+                let _ = app
+                    .opener()
+                    .open_url("https://github.com/caeled/travel-kit-app", None::<&str>);
             }
             "about" => {
                 if let Some(win) = app.get_webview_window("about") {

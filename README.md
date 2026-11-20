@@ -19,6 +19,23 @@ app for Windows and macOS:
 The app's home page links to all five rooms, and a built-in **Help** page documents
 what each tool does, how to use it, and where its data comes from.
 
+## What's new in v1.3.1
+
+A documentation release — the rooms and the splash are unchanged; the manual
+caught up with the app:
+
+- **Help → GitHub Repository** joins the Help menu, opening this app's source
+  repository in your browser, beside Documentation and the Product Index.
+- **The Documentation and Help pages are rebuilt** to a professional manual
+  standard: a contents row, numbered sections, and two new sections —
+  **Troubleshooting** (a room won't load, a room needs the internet, audio
+  won't play) and **Source & support** (this repository, the Everyday Cool
+  collection repository, where to report an issue, and Steven Powell's
+  LinkedIn — "Steve's Profile").
+- **Every room's Help now shows its source:** Find It, The Radio Room, and
+  The Survival Guide gained a Source on GitHub link in their Help menus, and
+  Tonight's Sky and Weather Everywhere gained Documentation & source panels.
+
 ## What's new in v1.3.0
 
 - **The Survival Guide joins as the fifth room** — Steven's capstone room from the
